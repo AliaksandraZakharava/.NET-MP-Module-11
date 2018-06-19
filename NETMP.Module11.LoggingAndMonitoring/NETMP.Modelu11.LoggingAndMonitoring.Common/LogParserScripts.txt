@@ -1,0 +1,5 @@
+﻿Query for Log Parser: 
+
+Show log statistics: LogParser "SELECT level as Level, COUNT(*) as TotalCount FROM {file path to .scv file} GROUP BY level" -o: DATAGRID
+
+Show only errors with messages: LogParser "SELECT level, message FROM {file path to .scv file} WHERE level='ERROR'" -o: DATAGRID
